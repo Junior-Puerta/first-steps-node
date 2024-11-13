@@ -1,6 +1,6 @@
 # Projeto Node do Zero
 
-## Criação de um servidor usando a biblioteca nativa do Node.js
+- Criação de um servidor usando a biblioteca nativa do Node.js
 
 ## Criação da API REST
 
