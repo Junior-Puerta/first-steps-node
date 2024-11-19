@@ -24,7 +24,15 @@ server.post("/videos", (request, reply) => {
 server.get("/videos", () => {
   const listaVideos = database.list();
 
-  console.log(listaVideos);
+  //console.log(listaVideos);
+
+  return listaVideos;
+});
+
+server.get("/videos/search", (request, reply) => {
+  const search = request.query.movie;
+
+  const listaVideos = database.list(search);
 
   return listaVideos;
 });
@@ -45,7 +53,7 @@ server.put("/videos/:id", (request, reply) => {
 server.delete("/videos/:id", (request, reply) => {
   const videoId = request.params.id;
   database.delete(videoId);
-  
+
   return reply.status(204).send();
 });
 
