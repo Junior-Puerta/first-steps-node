@@ -5,7 +5,16 @@ export class DatabaseMemory {
   #videos = new Map(); //# informação visivel apenas dentro da classe. // ao invés de criar um array criar como um new Map()
 
   list() {
-    return Array.from(this.#videos.values());//return this.#videos.values(); precisa mudar para array para pois o values retorna um iterable iterator
+    return Array.from(this.#videos.entries()).map((arrayvideo) => {
+      const id = arrayvideo[0];
+      const data = arrayvideo[1];
+
+      return {
+        id,
+        ...data,
+      };
+    });
+    //return Array.from(this.#videos.entries()); //return this.#videos.values(); precisa mudar para array para pois o values retorna um iterable iterator
   }
 
   create(video) {
@@ -20,7 +29,6 @@ export class DatabaseMemory {
   }
 
   delete(id) {
-    this.#videos.set(length, video);
-    
+    this.#videos.delete(id);
   }
 }
