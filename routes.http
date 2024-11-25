@@ -2,26 +2,26 @@ POST http://localhost:3333/videos
 Content-type: application/json
 
 {
-    "Title": "Video 2",
+    "Title": "Video 1",
     "Description": "This is the number 1 video",
-    "Lenght": 180
+    "Length": 180
 }
 
 ###
 GET  http://localhost:3333/videos 
 
 ###
-GET  http://localhost:3333/videos/search?movie=Video 1 
+GET  http://localhost:3333/videos/search?movie=Vídeo  
 
 ###
-PUT http://localhost:3333/videos/23ba7d80-3dbe-4902-b488-3cdb97fe2f8e
+PUT http://localhost:3333/videos/7803412d-555e-4675-9099-accf376bc3d6
 Content-type: application/json
 
 {
-    "Title": "Novo vídeo 1",
+    "Title": "Novo vídeo 1133",
     "Description": "This is the new number 1 video!",
     "Length": 90
 }
 
 ###
-DELETE http://localhost:3333/videos/0c326564-3e51-4ff2-9db9-8b3ff6636052
+DELETE http://localhost:3333/videos/dcdcd25e-5e94-4cc9-9327-26bcd6cd7e38
