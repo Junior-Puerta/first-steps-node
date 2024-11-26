@@ -5,6 +5,7 @@ import { DatabasePostgres } from "./database-postgres.js";
 const server = fastify();
 
 server.listen({
+  host: '0.0.0.0',
   port: process.env.PORRT ?? 3333,
 });
 
