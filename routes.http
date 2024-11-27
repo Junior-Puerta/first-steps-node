@@ -1,20 +1,20 @@
-POST http://localhost:3333/videos 
+POST https://first-steps-node.onrender.com/videos 
 Content-type: application/json
 
 {
-    "Title": "Video 1",
-    "Description": "This is the number 1 video",
+    "Title": "Video 2",
+    "Description": "This is the number 2 video",
     "Length": 180
 }
 
 ###
-GET  http://localhost:3333/videos 
+GET  https://first-steps-node.onrender.com/videos 
 
 ###
-GET  http://localhost:3333/videos/search?movie=Vídeo  
+GET  https://first-steps-node.onrender.com/videos/search?movie=Vídeo  
 
 ###
-PUT http://localhost:3333/videos/7803412d-555e-4675-9099-accf376bc3d6
+PUT https://first-steps-node.onrender.com/videos/7803412d-555e-4675-9099-accf376bc3d6
 Content-type: application/json
 
 {
@@ -24,4 +24,4 @@ Content-type: application/json
 }
 
 ###
-DELETE http://localhost:3333/videos/dcdcd25e-5e94-4cc9-9327-26bcd6cd7e38
+DELETE https://first-steps-node.onrender.com/videos/dcdcd25e-5e94-4cc9-9327-26bcd6cd7e38
